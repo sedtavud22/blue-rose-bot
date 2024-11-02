@@ -43,9 +43,11 @@ const eventFiles = fs
 for (const file of eventFiles) {
   const filePath = path.join(eventsPath, file);
   const event = require(filePath).default;
+
   if (event.once) {
     client.once(event.name, (...args) => event.execute(...args));
   } else {
+    console.log("event");
     client.on(event.name, (...args) => event.execute(...args));
   }
 }
