@@ -8,6 +8,7 @@ const pingCommand: Command = {
   async execute(interaction) {
     await interaction.reply("Pong!");
   },
+  cooldown: 5,
 };
 
 export default pingCommand;

@@ -13,6 +13,7 @@ const userCommand: Command = {
       `This command was run by ${interaction.user.username}, who joined on ${member.joinedAt}.`
     );
   },
+  cooldown: 5,
 };
 
 export default userCommand;

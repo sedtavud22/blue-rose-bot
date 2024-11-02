@@ -7,6 +7,7 @@ import type { Command } from "./types/Command";
 const client = new ExtendedClient({ intents: [GatewayIntentBits.Guilds] });
 
 client.commands = new Collection();
+client.cooldowns = new Collection();
 
 const foldersPath = path.join(__dirname, "commands");
 // get all folders in commands folder

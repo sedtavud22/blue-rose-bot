@@ -11,6 +11,7 @@ const serverCommand: Command = {
       `This server is ${interaction.guild?.name} and has ${interaction.guild?.memberCount} members.`
     );
   },
+  cooldown: 5,
 };
 
 export default serverCommand;
